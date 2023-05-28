@@ -1,0 +1,20 @@
+{
+  "name": "dancingsnow0517.github.io",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DancingSnow0517/DancingSnow0517.github.io.git"
+  },
+  "author": "DancingSnow0517",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DancingSnow0517/DancingSnow0517.github.io/issues"
+  },
+  "homepage": "https://github.com/DancingSnow0517/DancingSnow0517.github.io#readme",
+  "devDependencies": {
+    "vuepress": "^1.9.9"
+  }
+}
