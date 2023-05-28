@@ -3,8 +3,14 @@ module.exports = {
     description: 'DancingSnow的个人博客',
     themeConfig: {
         nav: [
-            {text: '首页', link: '/'},
-            {text: '崩坏：星穹铁道抽卡导出工具', 'link': '/StarRail-gacha'}
+            {
+                text: '首页',
+                link: '/'
+            },
+            {
+                text: '崩坏：星穹铁道抽卡导出工具',
+                'link': 'https://dancingsnow0517.github.io/StarRail-gacha'
+            }
         ]
     }
 }
