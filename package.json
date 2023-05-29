@@ -15,6 +15,7 @@
   },
   "homepage": "https://github.com/DancingSnow0517/DancingSnow0517.github.io#readme",
   "devDependencies": {
-    "vuepress": "^1.9.9"
+    "vuepress": "^1.9.9",
+    "vuepress-theme-reco": "^1.6.17"
   }
 }
