@@ -1,21 +1,21 @@
-name: Build and Deploy
-on:
-  push:
-    branches:
-      - main
-
-jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3.5.2
-
-      - name: vuepress-deploy
-        uses: jenkey2011/vuepress-deploy@master
-        env:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          TARGET_REPO: DancingSnow0517/DancingSnow0517.github.io
-          TARGET_BRANCH: gh_pages
-          BUILD_SCRIPT: yarn && yarn build
-          BUILD_DIR: docs/.vuepress/dist/
+#name: Build and Deploy
+#on:
+#  push:
+#    branches:
+#      - main
+#
+#jobs:
+#  build-and-deploy:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Checkout
+#        uses: actions/checkout@v3.5.2
+#
+#      - name: vuepress-deploy
+#        uses: jenkey2011/vuepress-deploy@master
+#        env:
+#          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+#          TARGET_REPO: DancingSnow0517/DancingSnow0517.github.io
+#          TARGET_BRANCH: gh_pages
+#          BUILD_SCRIPT: yarn && yarn build
+#          BUILD_DIR: docs/.vuepress/dist/

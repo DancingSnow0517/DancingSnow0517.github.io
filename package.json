@@ -1,21 +1,26 @@
 {
-  "name": "dancingsnow0517.github.io",
+  "name": "hexo-site",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "dev": "vuepress dev docs",
-    "build": "vuepress build docs"
+    "build": "hexo generate",
+    "clean": "hexo clean",
+    "deploy": "hexo deploy",
+    "server": "hexo server"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/DancingSnow0517/DancingSnow0517.github.io.git"
+  "hexo": {
+    "version": "6.3.0"
   },
-  "author": "DancingSnow0517",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/DancingSnow0517/DancingSnow0517.github.io/issues"
-  },
-  "homepage": "https://github.com/DancingSnow0517/DancingSnow0517.github.io#readme",
-  "devDependencies": {
-    "vuepress": "^1.9.9",
-    "vuepress-theme-reco": "^1.6.17"
+  "dependencies": {
+    "hexo": "^6.3.0",
+    "hexo-generator-archive": "^2.0.0",
+    "hexo-generator-category": "^2.0.0",
+    "hexo-generator-index": "^3.0.0",
+    "hexo-generator-tag": "^2.0.0",
+    "hexo-renderer-ejs": "^2.0.0",
+    "hexo-renderer-marked": "^6.0.0",
+    "hexo-renderer-stylus": "^2.1.0",
+    "hexo-server": "^3.0.0",
+    "hexo-theme-landscape": "^1.0.0"
   }
 }
