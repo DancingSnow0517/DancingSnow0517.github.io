@@ -1,21 +1,30 @@
-#name: Build and Deploy
-#on:
-#  push:
-#    branches:
-#      - main
-#
-#jobs:
-#  build-and-deploy:
-#    runs-on: ubuntu-latest
-#    steps:
-#      - name: Checkout
-#        uses: actions/checkout@v3.5.2
-#
-#      - name: vuepress-deploy
-#        uses: jenkey2011/vuepress-deploy@master
-#        env:
-#          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-#          TARGET_REPO: DancingSnow0517/DancingSnow0517.github.io
-#          TARGET_BRANCH: gh_pages
-#          BUILD_SCRIPT: yarn && yarn build
-#          BUILD_DIR: docs/.vuepress/dist/
+name: Build and Deploy
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on:
+      - ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          submodules: true
+          fetch-depth: 0
+
+      - name: Build and Deploy
+        uses: theme-keep/hexo-deploy-github-pages-action@master
+        env:
+          PERSONAL_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          PUBLISH_REPOSITORY: https://github.com/DancingSnow0517/DancingSnow0517.github.io
+          BRANCH: gh-pages
+
+      - name: Update db.json
+        uses: stefanzweifel/git-auto-commit-action@v5
