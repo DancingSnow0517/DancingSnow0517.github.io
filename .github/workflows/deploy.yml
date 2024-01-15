@@ -30,13 +30,7 @@ jobs:
           restore-keys: |
             ${{ runner.OS }}-npm-cache
       - name: Replace algolia adminApiKey
-        uses: cschleiden/replace-tokens@v1
-        with:
-          tokenPrefix: '{{'
-          tokenSuffix: '}}'
-          files: [ _config.yml ]
-        env:
-          adminApiKey: ${{ secrets.ALGOLIA_ADMIN_API_KEY }}
+        run: find *.xml -type f -exec sed -i ''s/{{adminApiKey}}/${{ secrets.ALGOLIA_ADMIN_API_KEY }}/g'' {} \;
       - name: Install Dependencies
         run: npm install
       - name: Upload algolia index
