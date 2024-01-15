@@ -8,9 +8,9 @@
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo server",
-    "server_dev": "hexo server --config _config.yml,dev_config.yml",
+    "server-dev": "hexo server --config _config.yml,dev_config.yml",
     "algolia": "hexo algolia",
-    "algolia_dev": "hexo algolia --config _config.yml,dev_config.yml"
+    "algolia-dev": "hexo algolia --config _config.yml,dev_config.yml"
   },
   "hexo": {
     "version": "6.3.0"
@@ -30,6 +30,7 @@
     "hexo-renderer-marked": "^6.0.0",
     "hexo-renderer-stylus": "^2.1.0",
     "hexo-server": "^3.0.0",
-    "hexo-theme-landscape": "^1.0.0"
+    "hexo-theme-landscape": "^1.0.0",
+    "hexo-wordcount": "^6.0.1"
   }
 }
