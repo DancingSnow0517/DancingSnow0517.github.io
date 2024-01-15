@@ -3,5 +3,6 @@
 /node_modules/
 /public/
 
+/db.json
 /dev_config.yml
 /_multiconfig.yml
