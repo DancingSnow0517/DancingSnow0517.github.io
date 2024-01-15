@@ -5,26 +5,66 @@ on:
       - main
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on:
       - ubuntu-latest
-
     permissions:
       contents: write
-
     steps:
       - name: Checkout
         uses: actions/checkout@v3
         with:
           submodules: true
           fetch-depth: 0
-
-      - name: Build and Deploy
-        uses: theme-keep/hexo-deploy-github-pages-action@master
+      - name: Setup Nodejs
+        uses: actions/setup-node@v4
+      - name: Use Node.js 16.x
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+      - name: Cache NPM dependencies
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: ${{ runner.OS }}-npm-cache
+          restore-keys: |
+            ${{ runner.OS }}-npm-cache
+      - name: Replace algolia adminApiKey
+        uses: cschleiden/replace-tokens@v1
+        with:
+          tokenPrefix: '${{'
+          tokenSuffix: '}}'
+          files: [ _config.yml ]
         env:
-          PERSONAL_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          PUBLISH_REPOSITORY: DancingSnow0517/DancingSnow0517.github.io
-          BRANCH: gh-pages
-
+          adminApiKey: ${{ secrets.ALGOLIA_ADMIN_API_KEY }}
+      - name: Install Dependencies
+        run: npm install
+      - name: Upload algolia index
+        run: npm run algolia
+      - name: Build
+        run: npm run build
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3.0.0
+        with:
+          path: ./public
       - name: Update db.json
         uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Update db.json
+          file_pattern: db.json
+
+  deploy:
+    needs:
+      - build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on:
+      - ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2

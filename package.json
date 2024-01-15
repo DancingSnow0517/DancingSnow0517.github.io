@@ -4,15 +4,20 @@
   "private": true,
   "scripts": {
     "build": "hexo generate",
+    "build-dev": "hexo generate --config _config.yml,dev_config.yml",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
-    "server": "hexo server"
+    "server": "hexo server",
+    "server_dev": "hexo server --config _config.yml,dev_config.yml",
+    "algolia": "hexo algolia",
+    "algolia_dev": "hexo algolia --config _config.yml,dev_config.yml"
   },
   "hexo": {
     "version": "6.3.0"
   },
   "dependencies": {
     "hexo": "^6.3.0",
+    "hexo-algoliasearch": "^2.0.1",
     "hexo-browsersync": "^0.3.0",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^2.0.0",

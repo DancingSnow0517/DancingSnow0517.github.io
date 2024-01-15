@@ -2,3 +2,6 @@
 
 /node_modules/
 /public/
+
+/dev_config.yml
+/_multiconfig.yml
