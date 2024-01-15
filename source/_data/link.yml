@@ -1,0 +1,14 @@
+- class_name: 友情链接
+  link_list:
+    - name: Code & Tea
+      descr: Neko's bug log
+      link: https://blog.jvav.me/
+      avatar: https://blog.jvav.me/avatar.png
+    - name: 陌漓的小窝
+      descr: 一只可爱的小陌漓~
+      link: https://cwcu.com.cn/
+      avatar: https://api.cwcu.com.cn/%E5%B0%8F%E7%AA%9D%E7%9A%84%E4%B8%9C%E8%A5%BF/eli-_1__1.ico
+    - name: NECO的小站
+      descr: 只是一位一般路过人类
+      link: https://blog.jljdxjh.top/
+      avatar: https://blog.jljdxjh.top/img/avatar.jpg
