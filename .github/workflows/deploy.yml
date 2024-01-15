@@ -30,7 +30,7 @@ jobs:
           restore-keys: |
             ${{ runner.OS }}-npm-cache
       - name: Replace algolia adminApiKey
-        run: find *.xml -type f -exec sed -i ''s/{{adminApiKey}}/${{ secrets.ALGOLIA_ADMIN_API_KEY }}/g'' {} \;
+        run: find _config.yml -type f -exec sed -i ''s/{{adminApiKey}}/${{ secrets.ALGOLIA_ADMIN_API_KEY }}/g'' {} \;
       - name: Install Dependencies
         run: npm install
       - name: Upload algolia index
