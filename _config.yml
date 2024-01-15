@@ -108,7 +108,7 @@ deploy:
 algolia:
   appId: Z8A35APCSM
   apiKey: 8090baeb99a2cab086b36556ae9f9aa7
-  adminApiKey: ${{adminApiKey}}
+  adminApiKey: {{adminApiKey}}
   chunkSize: 5000
   indexName: blog
   fields:

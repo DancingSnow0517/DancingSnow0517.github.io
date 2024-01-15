@@ -32,7 +32,7 @@ jobs:
       - name: Replace algolia adminApiKey
         uses: cschleiden/replace-tokens@v1
         with:
-          tokenPrefix: '${{'
+          tokenPrefix: '{{'
           tokenSuffix: '}}'
           files: [ _config.yml ]
         env:
