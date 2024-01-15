@@ -3,11 +3,12 @@ title: 异星工厂（factorio） 开服教程
 date: 2024-01-16 01:48:15
 categories:
   - 游戏
-  - 异星工厂
   - 教程
+  - 异星工厂
 tags:
   - Factorio
   - 异星工厂
+  - 教程
 ---
 {% note warning %}
 此教程基于`linux`服务器，使用`windows`类似
