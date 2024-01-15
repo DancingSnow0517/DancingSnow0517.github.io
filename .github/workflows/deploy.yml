@@ -25,7 +25,6 @@ jobs:
           PERSONAL_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           PUBLISH_REPOSITORY: DancingSnow0517/DancingSnow0517.github.io
           BRANCH: gh-pages
-          CNAME: blog.dancingsnow.xyz
 
       - name: Update db.json
         uses: stefanzweifel/git-auto-commit-action@v5
