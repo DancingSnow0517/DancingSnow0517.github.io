@@ -16,6 +16,8 @@ jobs:
         with:
           submodules: true
           fetch-depth: 0
+      - name: restore timestamps
+        uses: chetan/git-restore-mtime-action@v2
       - name: Setup Nodejs
         uses: actions/setup-node@v4
       - name: Use Node.js 16.x
