@@ -1,0 +1,11 @@
+User-agent: *
+
+Allow: /
+
+Disallow: /images/
+
+Disallow: /*.js
+Disallow: /*.css
+
+Sitemap: https://blog.dancingsnow.xyz/sitemap.xml
+Sitemap: https://blog.dancingsnow.xyz/baidusitemap.xml
