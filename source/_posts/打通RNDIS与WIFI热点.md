@@ -45,3 +45,7 @@ iptables -D tetherctrl_FORWARD 行号
 ```
 
 然后我的电脑就能够和平板互相ping通了，FTP等服务一样可用。
+
+{% note warning %}
+此方法需要在每次电脑使用 `USB网络共享` 后重新执行
+{% endnote %}
