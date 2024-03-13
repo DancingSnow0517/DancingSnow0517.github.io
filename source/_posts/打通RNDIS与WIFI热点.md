@@ -1,12 +1,13 @@
 ---
 title: 打通USB网络共享（RNDIS）与WIFI热点
-date: 2024-03-13 12:56:03
 categories:
   - 刷机
   - 安卓
 tags:
   - 安卓
   - adb
+abbrlink: ec531c77
+date: 2024-03-13 12:56:03
 ---
 
 ### 原始需求
