@@ -269,7 +269,7 @@ aside:
     enable: true
     series_title: false # The title shows the series name
     orderBy: 'date' # Order by title or date
-    order: -1 # Sort of order. 1, asc for ascending; -1, desc for descending
+    order: 1 # Sort of order. 1, asc for ascending; -1, desc for descending
 
 # busuanzi count for PV / UV in site
 # 訪問人數
@@ -804,7 +804,7 @@ series:
   enable: true
   orderBy: 'title' # Order by title or date
   order: 1 # Sort of order. 1, asc for ascending; -1, desc for descending
-  number: true
+  number: false
 
 # abcjs (樂譜渲染)
 # See https://github.com/paulrosen/abcjs

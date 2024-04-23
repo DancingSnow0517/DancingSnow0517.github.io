@@ -1,6 +1,6 @@
 ---
-title: "NeoForge 模组开发教程 - Minecraft 1.20.4 配置开发环境 #0"
-series: "NeoForge 模组开发教程"
+title: "NeoForge 模组开发教程#0 - Minecraft 1.20.4 配置开发环境"
+series: NeoForgeTutorial
 mathjax: false
 categories:
   - 游戏
@@ -40,5 +40,3 @@ date: 2024-04-23 12:03:15
    ![img.png](3.png)
 
 此教程所写代码的GitHub仓库：https://github.com/DancingSnow0517/Tutorial-Mod-NeoForge/tree/0-setup
-
-{% series %}
