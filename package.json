@@ -13,10 +13,10 @@
     "algolia-dev": "hexo algolia --config _config.yml,dev_config.yml"
   },
   "hexo": {
-    "version": "7.2.0"
+    "version": "7.1.1"
   },
   "dependencies": {
-    "hexo": "^7.2.0",
+    "hexo": "~7.1.1",
     "hexo-abbrlink": "^2.2.1",
     "hexo-algoliasearch": "^2.0.1",
     "hexo-browsersync": "^0.3.0",
@@ -31,7 +31,7 @@
     "hexo-neat": "^1.0.9",
     "hexo-renderer-ejs": "^2.0.0",
     "hexo-renderer-jade": "^0.5.0",
-    "hexo-renderer-marked": "^6.3.0",
+    "hexo-renderer-marked": "^6.0.0",
     "hexo-renderer-stylus": "^3.0.1",
     "hexo-server": "^3.0.0",
     "hexo-theme-landscape": "^1.0.0",
